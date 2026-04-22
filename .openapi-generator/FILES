@@ -4,7 +4,10 @@
 .travis.yml
 README.md
 composer.json
-docs/Api/DefaultApi.md
+docs/Api/MerchantOrdersApi.md
+docs/Api/MerchantWalletApi.md
+docs/Api/OrderShippingApi.md
+docs/Api/SellerProfileManagementApi.md
 docs/Model/AuthStatusResponse.md
 docs/Model/BusinessAddress.md
 docs/Model/DeliveryTimeRangeDisplay.md
@@ -37,7 +40,10 @@ docs/Model/UpdateOrderStatus.md
 docs/Model/VerifyOrder.md
 docs/Model/WalletBalance.md
 git_push.sh
-lib/Api/DefaultApi.php
+lib/Api/MerchantOrdersApi.php
+lib/Api/MerchantWalletApi.php
+lib/Api/OrderShippingApi.php
+lib/Api/SellerProfileManagementApi.php
 lib/ApiException.php
 lib/Configuration.php
 lib/FormDataProcessor.php
@@ -76,7 +82,10 @@ lib/Model/VerifyOrder.php
 lib/Model/WalletBalance.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Api/DefaultApiTest.php
+test/Api/MerchantOrdersApiTest.php
+test/Api/MerchantWalletApiTest.php
+test/Api/OrderShippingApiTest.php
+test/Api/SellerProfileManagementApiTest.php
 test/Model/AuthStatusResponseTest.php
 test/Model/BusinessAddressTest.php
 test/Model/DeliveryTimeRangeDisplayTest.php
