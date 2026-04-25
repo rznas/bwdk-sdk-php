@@ -1,0 +1,31 @@
+name: Publish PHP SDK
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer
+
+      - name: Install dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+
+      # PHP packages are distributed via Packagist which pulls from this Git repo.
+      # After this workflow runs, Packagist auto-syncs if the webhook is configured.
+      # See: https://packagist.org/packages/submit to register the package.
