@@ -26,11 +26,11 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+      "url": "https://github.com/rznas/bwdk-sdk-php.git"
     }
   ],
   "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+    "rznas/bwdk-sdk-php": "*@dev"
   }
 }
 ```
